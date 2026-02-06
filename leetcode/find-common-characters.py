@@ -13,7 +13,8 @@ def commonChars(words):
                 temCount[ch] = temCount.get(ch, 0) + 1
             for ch in count:
                 if ch in temCount:
-                    min(count[ch],temCount[ch])
+                  count[ch]  =min(count[ch],temCount[ch])
+                    # print("min count",word,min(count[ch],temCount[ch]), ch,count[ch],temCount[ch])
                 else:
                     count[ch] = 0
 
