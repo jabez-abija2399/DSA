@@ -4,9 +4,12 @@ phoneBook = {}
 for _ in range(n):
     name, num = input().split()
     phoneBook[name] = num
-for _ in range(n):
-    name = input()
-    if name in phoneBook:
-        print(f"{name}={phoneBook[name]}")
-    else:
-        print("Not found")
+while True:
+    try:
+        query = input().strip()
+        if query in phoneBook:
+            print(query + "=" + phoneBook[query])
+        else:
+            print("Not found")
+    except:
+        break
